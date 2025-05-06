@@ -5,40 +5,69 @@
     <title>My 30 Game Hub</title>
     <style>
         body {
-            background: #000;
-            color: #0ff;
+            margin: 0;
+            overflow: hidden;
+            background: black;
             font-family: 'Courier New', Courier, monospace;
+            color: #0ff;
+        }
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
             padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 3em;
+            animation: rgbText 5s infinite alternate;
         }
         .games {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 20px;
+            margin-top: 40px;
         }
         .game {
             text-align: center;
-            background: #111;
+            background: rgba(17, 17, 17, 0.8);
             padding: 15px;
             border-radius: 10px;
             transition: 0.3s;
+            animation: rgbText 4s infinite alternate;
         }
         .game img {
             max-width: 100px;
             margin-bottom: 10px;
         }
         .game a {
-            color: #0ff;
             text-decoration: none;
             font-weight: bold;
-            display: block;
+            font-size: 1.1em;
+            animation: rgbText 5s infinite alternate;
         }
         .game:hover {
-            background: #222;
+            background: rgba(34, 34, 34, 0.8);
             transform: scale(1.05);
+        }
+        @keyframes rgbText {
+            0% { color: #ff0000; }
+            25% { color: #00ff00; }
+            50% { color: #0000ff; }
+            75% { color: #ff00ff; }
+            100% { color: #00ffff; }
         }
     </style>
 </head>
 <body>
+<canvas id="particles"></canvas>
+
+<div class="content">
     <h1>🎮 My 30 Games 🎮</h1>
     <div class="games">
 
@@ -48,145 +77,204 @@
         </div>
 
         <div class="game">
-            <img src="images/02-Archery-Game.jpeg" alt="Archery Game">
+            <img src="images/02-Archery-Game.jpg" alt="Archery Game">
             <a href="02-Archery-Game/index.html">Archery Game</a>
         </div>
 
         <div class="game">
-            <img src="images/03-Speed-Typing-Game.jpeg" alt="Speed Typing Game">
+            <img src="images/03-Speed-Typing-Game.jpg" alt="Speed Typing Game">
             <a href="03-Speed-Typing-Game/index.html">Speed Typing Game</a>
         </div>
 
         <div class="game">
-            <img src="images/04-Breakout-Game.jpeg" alt="Breakout Game">
+            <img src="images/04-Breakout-Game.jpg" alt="Breakout Game">
             <a href="04-Breakout-Game/index.html">Breakout Game</a>
         </div>
 
         <div class="game">
-            <img src="images/05-Minesweeper-Game.jpeg" alt="Minesweeper Game">
+            <img src="images/05-Minesweeper-Game.jpg" alt="Minesweeper Game">
             <a href="05-Minesweeper-Game/index.html">Minesweeper Game</a>
         </div>
 
         <div class="game">
-            <img src="images/06-Tower-Blocks.png" alt="Tower Blocks">
+            <img src="images/06-Tower-Blocks.jpg" alt="Tower Blocks">
             <a href="06-Tower-Blocks/index.html">Tower Blocks</a>
         </div>
 
         <div class="game">
-            <img src="images/07-Ping-Pong-Game.png" alt="Ping Pong Game">
+            <img src="images/07-Ping-Pong-Game.jpg" alt="Ping Pong Game">
             <a href="07-Ping-Pong-Game/index.html">Ping Pong Game</a>
         </div>
 
         <div class="game">
-            <img src="images/08-Tetris-Game.png" alt="Tetris Game">
+            <img src="images/08-Tetris-Game.jpg" alt="Tetris Game">
             <a href="08-Tetris-Game/index.html">Tetris Game</a>
         </div>
 
         <div class="game">
-            <img src="images/09-Tilting-Maze-Game.png" alt="Tilting Maze Game">
+            <img src="images/09-Tilting-Maze-Game.jpg" alt="Tilting Maze Game">
             <a href="09-Tilting-Maze-Game/index.html">Tilting Maze Game</a>
         </div>
 
         <div class="game">
-            <img src="images/10-Memory-Card-Game.png" alt="Memory Card Game">
+            <img src="images/10-Memory-Card-Game.jpg" alt="Memory Card Game">
             <a href="10-Memory-Card-Game/index.html">Memory Card Game</a>
         </div>
 
         <div class="game">
-            <img src="images/11-Rock-Paper-Scissors.png" alt="Rock Paper Scissors">
+            <img src="images/11-Rock-Paper-Scissors.jpg" alt="Rock Paper Scissors">
             <a href="11-Rock-Paper-Scissors/index.html">Rock Paper Scissors</a>
         </div>
 
         <div class="game">
-            <img src="images/12-Type-Number-Guessing-Game.png" alt="Type Number Guessing Game">
+            <img src="images/12-Type-Number-Guessing-Game.jpg" alt="Type Number Guessing Game">
             <a href="12-Type-Number-Guessing-Game/index.html">Type Number Guessing Game</a>
         </div>
 
         <div class="game">
-            <img src="images/13-Tic-Tac-Toe.png" alt="Tic Tac Toe">
+            <img src="images/13-Tic-Tac-Toe.jpg" alt="Tic Tac Toe">
             <a href="13-Tic-Tac-Toe/index.html">Tic Tac Toe</a>
         </div>
 
         <div class="game">
-            <img src="images/14-Snake-Game.png" alt="Snake Game">
+            <img src="images/14-Snake-Game.jpg" alt="Snake Game">
             <a href="14-Snake-Game/index.html">Snake Game</a>
         </div>
 
         <div class="game">
-            <img src="images/15-Connect-Four-Game.png" alt="Connect Four Game">
+            <img src="images/15-Connect-Four-Game.jpg" alt="Connect Four Game">
             <a href="15-Connect-Four-Game/index.html">Connect Four Game</a>
         </div>
 
         <div class="game">
-            <img src="images/16-Insect-Catch-Game.png" alt="Insect Catch Game">
+            <img src="images/16-Insect-Catch-Game.jpg" alt="Insect Catch Game">
             <a href="16-Insect-Catch-Game/index.html">Insect Catch Game</a>
         </div>
 
         <div class="game">
-            <img src="images/17-Typing-Game.png" alt="Typing Game">
+            <img src="images/17-Typing-Game.jpg" alt="Typing Game">
             <a href="17-Typing-Game/index.html">Typing Game</a>
         </div>
 
         <div class="game">
-            <img src="images/18-Hangman-Game.png" alt="Hangman Game">
+            <img src="images/18-Hangman-Game.jpg" alt="Hangman Game">
             <a href="18-Hangman-Game/index.html">Hangman Game</a>
         </div>
 
         <div class="game">
-            <img src="images/19-Flappy-Bird-Game.png" alt="Flappy Bird Game">
+            <img src="images/19-Flappy-Bird-Game.jpg" alt="Flappy Bird Game">
             <a href="19-Flappy-Bird-Game/index.html">Flappy Bird Game</a>
         </div>
 
         <div class="game">
-            <img src="images/20-Crossy-Road-Game.png" alt="Crossy Road Game">
+            <img src="images/20-Crossy-Road-Game.jpg" alt="Crossy Road Game">
             <a href="20-Crossy-Road-Game/index.html">Crossy Road Game</a>
         </div>
 
         <div class="game">
-            <img src="images/21-2048-Game.png" alt="2048 Game">
+            <img src="images/21-2048-Game.jpg" alt="2048 Game">
             <a href="21-2048-Game/index.html">2048 Game</a>
         </div>
 
         <div class="game">
-            <img src="images/22-Dice-Roll-Simulator.png" alt="Dice Roll Simulator">
+            <img src="images/22-Dice-Roll-Simulator.jpg" alt="Dice Roll Simulator">
             <a href="22-Dice-Roll-Simulator/index.html">Dice Roll Simulator</a>
         </div>
 
         <div class="game">
-            <img src="images/23-Shape-Clicker-Game.png" alt="Shape Clicker Game">
+            <img src="images/23-Shape-Clicker-Game.jpg" alt="Shape Clicker Game">
             <a href="23-Shape-Clicker-Game/index.html">Shape Clicker Game</a>
         </div>
 
         <div class="game">
-            <img src="images/24-Typing-Game.png" alt="Typing Game 2">
+            <img src="images/24-Typing-Game.jpg" alt="Typing Game 2">
             <a href="24-Typing-Game/index.html">Typing Game 2</a>
         </div>
 
         <div class="game">
-            <img src="images/25-Speak-Number-Guessing-Game.png" alt="Speak Number Guessing Game">
+            <img src="images/25-Speak-Number-Guessing-Game.jpg" alt="Speak Number Guessing Game">
             <a href="25-Speak-Number-Guessing-Game/index.html">Speak Number Guessing Game</a>
         </div>
 
         <div class="game">
-            <img src="images/26-Fruit-Slicer-Game.png" alt="Fruit Slicer Game">
+            <img src="images/26-Fruit-Slicer-Game.jpg" alt="Fruit Slicer Game">
             <a href="26-Fruit-Slicer-Game/index.html">Fruit Slicer Game</a>
         </div>
 
         <div class="game">
-            <img src="images/27-Quiz-Game.png" alt="Quiz Game">
+            <img src="images/27-Quiz-Game.jpg" alt="Quiz Game">
             <a href="27-Quiz-Game/index.html">Quiz Game</a>
         </div>
 
         <div class="game">
-            <img src="images/28-Emoji-Catcher-Game.png" alt="Emoji Catcher Game">
+            <img src="images/28-Emoji-Catcher-Game.jpg" alt="Emoji Catcher Game">
             <a href="28-Emoji-Catcher-Game/index.html">Emoji Catcher Game</a>
         </div>
 
         <div class="game">
-            <img src="images/29-Whack-A-Mole-Game.png" alt="Whack A Mole Game">
+            <img src="images/29-Whack-A-Mole-Game.jpg" alt="Whack A Mole Game">
             <a href="29-Whack-A-Mole-Game/index.html">Whack A Mole Game</a>
         </div>
 
     </div>
+</div>
+
+<script>
+    const canvas = document.getElementById('particles');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+
+    function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener('resize', resize);
+    resize();
+
+    class Particle {
+        constructor() {
+            this.reset();
+        }
+        reset() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.vx = (Math.random() - 0.5) * 1;
+            this.vy = (Math.random() - 0.5) * 1;
+            this.size = Math.random() * 3 + 1;
+            this.color = `hsl(${Math.random() * 360}, 100%, 50%)`;
+        }
+        update() {
+            this.x += this.vx;
+            this.y += this.vy;
+            if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
+                this.reset();
+            }
+        }
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fillStyle = this.color;
+            ctx.fill();
+        }
+    }
+
+    for (let i = 0; i < 150; i++) {
+        particles.push(new Particle());
+    }
+
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach(p => {
+            p.update();
+            p.draw();
+        });
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+</script>
+
 </body>
 </html>
+
