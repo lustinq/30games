@@ -1,78 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My 30 Game Arcade</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #121212;
-      color: #ffffff;
-      text-align: center;
-      padding: 20px;
-    }
-    h1 {
-      margin-bottom: 30px;
-      font-size: 36px;
-    }
-    .game-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-    .game-card {
-      background-color: #1f1f1f;
-      border-radius: 12px;
-      padding: 15px;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .game-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
-    }
-    .game-link {
-      display: block;
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: bold;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>My 30 Game Hub</title>
+    <style>
+        body {
+            background: #000;
+            color: #0ff;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 20px;
+        }
+        .games {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+        .game {
+            text-align: center;
+            background: #111;
+            padding: 15px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        .game img {
+            max-width: 100px;
+            margin-bottom: 10px;
+        }
+        .game a {
+            color: #0ff;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+        }
+        .game:hover {
+            background: #222;
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
-  <h1>🎮 My 30 Game Arcade 🎮</h1>
-  <div class="game-grid">
-    <div class="game-card"><a class="game-link" href="01-Candy-Crush-Game/index.html">Candy Crush</a></div>
-    <div class="game-card"><a class="game-link" href="02-Archery-Game/index.html">Archery</a></div>
-    <div class="game-card"><a class="game-link" href="03-Speed-Typing-Game/index.html">Speed Typing</a></div>
-    <div class="game-card"><a class="game-link" href="04-Breakout-Game/index.html">Breakout</a></div>
-    <div class="game-card"><a class="game-link" href="05-Minesweeper-Game/index.html">Minesweeper</a></div>
-    <div class="game-card"><a class="game-link" href="06-Tower-Blocks/index.html">Tower Blocks</a></div>
-    <div class="game-card"><a class="game-link" href="07-Ping-Pong-Game/index.html">Ping Pong</a></div>
-    <div class="game-card"><a class="game-link" href="08-Tetris-Game/index.html">Tetris</a></div>
-    <div class="game-card"><a class="game-link" href="09-Tilting-Maze-Game/index.html">Tilting Maze</a></div>
-    <div class="game-card"><a class="game-link" href="10-Memory-Card-Game/index.html">Memory Card</a></div>
-    <div class="game-card"><a class="game-link" href="11-Rock-Paper-Scissors/index.html">Rock Paper Scissors</a></div>
-    <div class="game-card"><a class="game-link" href="12-Type-Number-Guessing-Game/index.html">Type Number Guessing</a></div>
-    <div class="game-card"><a class="game-link" href="13-Tic-Tac-Toe/index.html">Tic Tac Toe</a></div>
-    <div class="game-card"><a class="game-link" href="14-Snake-Game/index.html">Snake Game</a></div>
-    <div class="game-card"><a class="game-link" href="15-Connect-Four-Game/index.html">Connect Four</a></div>
-    <div class="game-card"><a class="game-link" href="16-Insect-Catch-Game/index.html">Insect Catch</a></div>
-    <div class="game-card"><a class="game-link" href="17-Typing-Game/index.html">Typing Game (1)</a></div>
-    <div class="game-card"><a class="game-link" href="18-Hangman-Game/index.html">Hangman</a></div>
-    <div class="game-card"><a class="game-link" href="19-Flappy-Bird-Game/index.html">Flappy Bird</a></div>
-    <div class="game-card"><a class="game-link" href="20-Crossy-Road-Game/index.html">Crossy Road</a></div>
-    <div class="game-card"><a class="game-link" href="21-2048-Game/index.html">2048</a></div>
-    <div class="game-card"><a class="game-link" href="22-Dice-Roll-Simulator/index.html">Dice Roll Simulator</a></div>
-    <div class="game-card"><a class="game-link" href="23-Shape-Clicker-Game/index.html">Shape Clicker</a></div>
-    <div class="game-card"><a class="game-link" href="24-Typing-Game/index.html">Typing Game (2)</a></div>
-    <div class="game-card"><a class="game-link" href="25-Speak-Number-Guessing-Game/index.html">Speak Number Guessing</a></div>
-    <div class="game-card"><a class="game-link" href="26-Fruit-Slicer-Game/index.html">Fruit Slicer</a></div>
-    <div class="game-card"><a class="game-link" href="27-Quiz-Game/index.html">Quiz Game</a></div>
-    <div class="game-card"><a class="game-link" href="28-Emoji-Catcher-Game/index.html">Emoji Catcher</a></div>
-    <div class="game-card"><a class="game-link" href="29-Whack-A-Mole-Game/index.html">Whack A Mole</a></div>
-  </div>
+    <h1>🎮 My 30 Games 🎮</h1>
+    <div class="games">
+
+        <div class="game">
+            <img src="images/01-Candy-Crush-Game.png" alt="Candy Crush">
+            <a href="01-Candy-Crush-Game/index.html">Candy Crush Game</a>
+        </div>
+
+        <div class="game">
+            <img src="images/02-Archery-Game.png" alt="Archery Game">
+            <a href="02-Archery-Game/index.html">Archery Game</a>
+        </div>
+
+        <div class="game">
+            <img src="images/03-Speed-Typing-Game.png" alt="Speed Typing Game">
+            <a href="03-Speed-Typing-Game/index.html">Speed Typing Game</a>
+        </div>
+
+        <div class="game">
+            <img src="images/04-Breakout-Game.png" alt="Breakout Game">
+            <a href="04-Breakout-Game/index.html">Breakout Game</a>
+        </div>
+
+        <div class="game">
+            <img src="images/05-Minesweeper-Game.png" alt="Minesweeper Game">
+            <a href="05-Minesweeper-Game/index.html">Minesweeper Game</a>
+        </div>
+
+        <div class="game">
+            <img src="images/06-Tower-Blocks.png" alt="Tower Blocks">
+            <a href="06-Tower-Blocks/index.html">Tower Blocks</a>
+        </div>
+
+        <div class="game">
+            <img src="images/07-Ping-Pong-Game.png" alt="Ping Pong Game">
+            <a href="07-Ping-Pong-Game/index.html">Ping Pong Game</a>
+        </div>
+
+        <div class="game">
+            <img src="images/08-Tetris-Game.png" alt="Tetris Game">
+            <a href="08-Tetris-Game/index.html">Tetris Game</a>
+        </div>
+
+        <div class="game">
+            <img src="images/09-Tilting-Maze-Game.png" alt="Tilting Maze Game">
+            <a href="09-Tilting-Maze-Game/index.html">Tilting Maze Game</a>
+        </div>
+
+        <div class="game">
+            <img src="images/10-Memory-Card-Game.png" alt="Memory Card Game">
+            <a href="10-Memory-Card-Game/index.html">Memory Card Game</a>
+        </div>
+
+        <div class="game">
+            <img src="images/11-Rock-Paper-Scissors.png" alt="Rock Paper Scissors">
+            <a href="11-Rock-Paper-Scissors/index.html">Rock Paper Scissors</a>
+        </div>
+
+        <div class="game">
+            <img src="images/12-Type-Number-Guessing-Game.png" alt="Type Number Guessing Game">
+            <a href="12-Type-Number-Guessing-Game/index.html">Type Number Guessing Game</a>
+        </div>
+
+        <div class="game">
+            <img src="images/13-Tic-Tac-Toe.png" alt="Tic Tac Toe">
+            <a href="13-Tic-Tac-Toe/index.html">Tic Tac Toe</a>
+        </div>
+
+        <div class="game">
+            <img src="images/14-Snake-Game.png" alt="Snake Game">
+            <a href="14-Snake-Game/index.html">Snake Game</a>
+        </div>
+
+        <div class="game">
+            <img src="images/15-Connect-Four-Game.png" alt="Connect Four Game">
+            <a href="15-Connect-Four-Game/index.html">Connect Four Game</a>
+        </div>
+
+        <div class="game">
+            <img src="images/16-Insect-Catch-Game.png" alt="Insect Catch Game">
+            <a href="16-Insect-Catch-Game/index.html">Insect Catch Game</a>
+        </div>
+
+        <div class="game">
+            <img src="images/17-Typing-Game.png" alt="Typing Game">
+            <a href="17-Typing-Game/index.html">Typing Game</a>
+        </div>
+
+        <div class="game">
+            <img src="images/18-Hangman-Game.png" alt="Hangman Game">
+            <a href="18-Hangman-Game/index.html">Hangman Game</a>
+        </div>
+
+        <div class="game">
+            <img src="images/19-Flappy-Bird-Game.png" alt="Flappy Bird Game">
+            <a href="19-Flappy-Bird-Game/index.html">Flappy Bird Game</a>
+        </div>
+
+        <div class="game">
+            <img src="images/20-Crossy-Road-Game.png" alt="Crossy Road Game">
+            <a href="20-Crossy-Road-Game/index.html">Crossy Road Game</a>
+        </div>
+
+        <div class="game">
+            <img src="images/21-2048-Game.png" alt="2048 Game">
+            <a href="21-2048-Game/index.html">2048 Game</a>
+        </div>
+
+        <div class="game">
+            <img src="images/22-Dice-Roll-Simulator.png" alt="Dice Roll Simulator">
+            <a href="22-Dice-Roll-Simulator/index.html">Dice Roll Simulator</a>
+        </div>
+
+        <div class="game">
+            <img src="images/23-Shape-Clicker-Game.png" alt="Shape Clicker Game">
+            <a href="23-Shape-Clicker-Game/index.html">Shape Clicker Game</a>
+        </div>
+
+        <div class="game">
+            <img src="images/24-Typing-Game.png" alt="Typing Game 2">
+            <a href="24-Typing-Game/index.html">Typing Game 2</a>
+        </div>
+
+        <div class="game">
+            <img src="images/25-Speak-Number-Guessing-Game.png" alt="Speak Number Guessing Game">
+            <a href="25-Speak-Number-Guessing-Game/index.html">Speak Number Guessing Game</a>
+        </div>
+
+        <div class="game">
+            <img src="images/26-Fruit-Slicer-Game.png" alt="Fruit Slicer Game">
+            <a href="26-Fruit-Slicer-Game/index.html">Fruit Slicer Game</a>
+        </div>
+
+        <div class="game">
+            <img src="images/27-Quiz-Game.png" alt="Quiz Game">
+            <a href="27-Quiz-Game/index.html">Quiz Game</a>
+        </div>
+
+        <div class="game">
+            <img src="images/28-Emoji-Catcher-Game.png" alt="Emoji Catcher Game">
+            <a href="28-Emoji-Catcher-Game/index.html">Emoji Catcher Game</a>
+        </div>
+
+        <div class="game">
+            <img src="images/29-Whack-A-Mole-Game.png" alt="Whack A Mole Game">
+            <a href="29-Whack-A-Mole-Game/index.html">Whack A Mole Game</a>
+        </div>
+
+    </div>
 </body>
 </html>
